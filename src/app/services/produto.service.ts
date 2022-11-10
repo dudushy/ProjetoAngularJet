@@ -6,7 +6,13 @@ import { Produto } from '../models/Produto';
   providedIn: 'root'
 })
 export class ProdutoService {
-  produtos : Produto [] = [{}]
+  produtos : Produto [] = [
+    {idProduto:1 , nome:"Vinisco", preco:500 },
+    {idProduto:2 , nome:"Marcello", preco:500 },
+    {idProduto:3 , nome:"Pandora", preco:99999999999 },
+
+
+  ]
   constructor(private httpClient: HttpClient) { }
 
 
@@ -15,6 +21,6 @@ export class ProdutoService {
 
 
   getProdutos(){
-    return 
+    return this.produtos;
   }
 }
