@@ -9,10 +9,10 @@ export class ProdutoService {
   title = 'ProdutoService';
 
   produtos: Produto[] = [
-    { idProduto: 1, nome: "Vinisco", preco: 500 },
-    { idProduto: 2, nome: "Marcello", preco: 500 },
-    { idProduto: 3, nome: "Pandora", preco: 99999999999 }
-  ]
+    { idProduto: 1, nome: 'Vinisco', preco: 500 },
+    { idProduto: 2, nome: 'Marcello', preco: 500 },
+    { idProduto: 3, nome: 'Pandora', preco: 99999999999 }
+  ];
 
   constructor(
     private httpClient: HttpClient
