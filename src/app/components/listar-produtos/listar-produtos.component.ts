@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-produtos.component.scss']
 })
 export class ListarProdutosComponent implements OnInit {
+  title = 'ListarProdutosComponent';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    console.log(`[${this.title}#constructor]`);
   }
 
+  ngOnInit(): void {
+    console.log(`[${this.title}#constructor]`);
+  }
 }
