@@ -13,6 +13,6 @@ export class ListarProdutosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(`[${this.title}#constructor]`);
+    console.log(`[${this.title}#ngOnInit]`);
   }
 }
