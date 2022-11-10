@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Produto } from './models/Produto';
@@ -21,8 +22,8 @@ export class AppComponent {
 
   ngOnInit() {
     console.log(`[${this.title}#ngOnInit]`);
-    this.get("https://localhost:7090/api/Produtos")
-    // this.http.post("https://localhost:7090/api/Produtos", this.produto) //!Por algum motivo deu erro no cors novamente
+    this.get('https://localhost:7090/api/Produtos');
+    // this.http.post('https://localhost:7090/api/Produtos', this.produto) //!Por algum motivo deu erro no cors novamente
   }
 
   async get(url: any) {
@@ -49,13 +50,13 @@ export class AppComponent {
     console.log(`[${this.title}#post] headers:`, headers);
 
     const body = {
-      //"idProduto": 99,
-      "nome": "string",
-      "imagem": "string",
-      "descricao": "string",
-      "estoque": 0,
-      "status": true,
-      "preco": 0
+      //'idProduto': 99,
+      'nome': 'string',
+      'imagem': 'string',
+      'descricao': 'string',
+      'estoque': 0,
+      'status': true,
+      'preco': 0
     };
     console.log(`[${this.title}#post] body:`, body);
 
