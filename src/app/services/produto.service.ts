@@ -15,12 +15,15 @@ export class ProdutoService {
   ]
   constructor(private httpClient: HttpClient) { }
 
-
-
-
-
+  addProdutos(produto: Produto){
+    this.produtos.push(produto);
+  }
 
   getProdutos(){
     return this.produtos;
+  }
+
+  delete(produto: Produto){
+    
   }
 }
