@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Produto } from './models/Produto';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'CrudAngular';
-  dados: any = {}
+  dados: any = {};
+  produto: Produto = new Produto;  
 
   constructor (private http: HttpClient)
   { 
@@ -17,7 +19,7 @@ export class AppComponent {
   async ngOnInit() {
     console.log(`[${this.title}#ngOnInit]`);
     this.get("https://localhost:7090/api/Produtos")
-   // this.post("https://localhost:7090/api/Produtos") //!Por algum motivo deu erro no cors novamente
+    this.http.post("https://localhost:7090/api/Produtos", this.produto ) //!Por algum motivo deu erro no cors novamente
   }
   async get(url: any){
 
